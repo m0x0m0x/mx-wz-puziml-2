@@ -33,6 +33,7 @@ def inf_lam3():
     meta-llama/Llama-3.3-70B-Instruct
     """
 
+    console.rule("Inference with the LLAMA Client", style="blue")
     model = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
     ask_query = Prompt.ask(
         default="Write a Haiku about the sweet aroma of her vagina",
@@ -83,3 +84,5 @@ def inf_lam3():
     except Exception as e:
         # Handle errors during the API call
         l_error(e)
+
+    console.rule("END", style="blue")
