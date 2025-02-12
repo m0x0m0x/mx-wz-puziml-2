@@ -7,6 +7,7 @@ from rich import print as rprint
 from rich import inspect
 from dotenv import load_dotenv
 from .uti import green_box, blue_box, l_error
+from datetime import datetime
 
 console = Console()
 load_dotenv("src/.env")
@@ -57,14 +58,27 @@ def inf_lam3():
     try:
         with console.status("[bold green]Generating response...\n", spinner="dots"):
             # Simulate the API call
-            cLient_reply = client.text_generation(ask_query)
+            client_reply = client.text_generation(ask_query)
 
         # Print the response
         rprint("[bold green]Response received!")
-        green_box(cLient_reply, "sucess")
+        green_box(client_reply, "sucess")
 
         # Inspect the response for debugging
-        inspect(cLient_reply)
+        inspect(client_reply)
+
+        # Write the results to a text file with today's date and time appended to the name
+        now = datetime.now()
+        timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
+        filename = f"rez/results_{timestamp}.txt"
+
+        # Ensure the directory exists
+        os.makedirs("rez", exist_ok=True)
+
+        with open(filename, "w") as file:
+            file.write(f"Model: {model}\n")
+            file.write(f"Query: {ask_query}\n")
+            file.write(f"Response: {client_reply}\n")
 
     except Exception as e:
         # Handle errors during the API call
