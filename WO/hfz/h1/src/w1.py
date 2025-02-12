@@ -31,7 +31,7 @@ def inf_lam3():
     meta-llama/Llama-3.3-70B-Instruct
     """
 
-    model = "meta-llama/Llama-3.3-70B-Instruct"
+    model = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
     ask_query = Prompt.ask(
         default="Write a Haiku about the sweet aroma of her vagina",
     )
@@ -60,7 +60,7 @@ def inf_lam3():
 
         # Print the response
         rprint("[bold green]Response received!")
-        rprint(cLient_reply)
+        box1(cLient_reply, "sucess")
 
         # Inspect the response for debugging
         inspect(cLient_reply)
