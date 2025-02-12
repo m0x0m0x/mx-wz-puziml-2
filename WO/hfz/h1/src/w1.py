@@ -6,7 +6,7 @@ from rich.prompt import Prompt
 from rich import print as rprint
 from rich import inspect
 from dotenv import load_dotenv
-from .uti import green_box, blue_box, l_error
+from .uti import green_box, blue_box, l_error, write_results_to_file_with_date
 from datetime import datetime
 
 console = Console()
@@ -69,19 +69,8 @@ def qwen15():
         # Inspect the response for debugging
         inspect(client_reply)
 
-        # Write the results to a text file with today's date and time appended to the name
-        now = datetime.now()
-        timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
-        filename = f"rez/results_{timestamp}.txt"
-
-        # Ensure the directory exists
-        os.makedirs("rez", exist_ok=True)
-
-        with open(filename, "w") as file:
-            file.write(f"# Model: {model}\n")
-            file.write(f"## Time: {timestamp}\n")
-            file.write(f"## Query: {ask_query}\n")
-            file.write(f"Response: {client_reply}\n")
+        # Write to results to a text file
+        write_results_to_file_with_date(model, ask_query, client_reply)
 
     except Exception as e:
         # Handle errors during the API call
@@ -128,27 +117,19 @@ def llam2():
 
         # Print the response
         rprint("[bold green]Response received!")
-        green_box(client_reply, "sucess")
+        green_box(client_reply, "success")
 
         # Inspect the response for debugging
         inspect(client_reply)
 
-        # Write the results to a text file with today's date and time appended to the name
-        now = datetime.now()
-        timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
-        filename = f"rez/results_{timestamp}.MD"
-
-        # Ensure the directory exists
-        os.makedirs("rez", exist_ok=True)
-
-        with open(filename, "w") as file:
-            file.write(f"# Model: {model}\n")
-            file.write(f"## Time: {timestamp}\n")
-            file.write(f"## Query: {ask_query}\n")
-            file.write(f"Response: {client_reply}\n")
+        # Write to results to a text file
+        write_results_to_file_with_date(model, ask_query, client_reply)
 
     except Exception as e:
         # Handle errors during the API call
         l_error(e)
 
     console.rule("END", style="blue")
+
+
+# Music Generation Model

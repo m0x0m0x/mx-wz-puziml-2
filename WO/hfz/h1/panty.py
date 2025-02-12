@@ -1,10 +1,9 @@
 # Main Entry Point
-from src.uti import header1
-from src.w1 import llam2
+from src.menu import show_menu
 
 
 def main():
-    llam2()
+    show_menu()
 
 
 if __name__ == "__main__":

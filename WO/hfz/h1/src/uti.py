@@ -1,6 +1,8 @@
 # Rich Prettifier Code
 # ------------------------------------------------------
 import logging
+import os
+from datetime import datetime
 from rich import print as rprint  # For rprinting
 from rich.pretty import pprint  # For pretty printing
 from rich import inspect  # For inspect
@@ -83,3 +85,22 @@ def l_error(text):
 
 def l_critical(text):
     log.critical(f"[white on red bold]{text}[/white on red bold]")
+
+
+# Function for writing files with date
+
+
+def write_results_to_file_with_date(model, ask_query, client_reply):
+    # Write the results to a text file with today's date and time appended to the name
+    now = datetime.now()
+    timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"rez/results_{timestamp}.MD"
+
+    # Ensure the directory exists
+    os.makedirs("rez", exist_ok=True)
+
+    with open(filename, "w") as file:
+        file.write(f"# Model: {model}\n")
+        file.write(f"## Time: {timestamp}\n")
+        file.write(f"## Query: {ask_query}\n")
+        file.write(f"Response: {client_reply}\n")
