@@ -6,7 +6,7 @@ from rich.prompt import Prompt
 from rich import print as rprint
 from rich import inspect
 from dotenv import load_dotenv
-from .uti import box1
+from .uti import box1, l_error
 
 console = Console()
 load_dotenv("src/.env")
@@ -68,4 +68,4 @@ def inf_lam3():
 
     except Exception as e:
         # Handle errors during the API call
-        console.log(f"[bold red]Error during inference: {e}")
+        l_error(e)
