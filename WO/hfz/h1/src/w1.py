@@ -26,6 +26,7 @@ def inf_cl1():
 
 
 def inf_lam3():
+    os.system("clear")
     """
     Inference with the LLAMA Client
     meta-llama/Llama-3.3-70B-Instruct

@@ -53,6 +53,18 @@ def box1(text, title):
     console.print(panel)
 
 
+def box2(text, title):
+    panel = Panel.fit(
+        f"""[blue]{text}[/blue]""",
+        title=f"{title}",
+        subtitle=":>",
+        style="Bold",
+        border_style="blue",
+    )
+    # Print the Panel
+    console.print(panel)
+
+
 def l_debug(text):
     log.debug(f"[green]{text}[/green]")
 
