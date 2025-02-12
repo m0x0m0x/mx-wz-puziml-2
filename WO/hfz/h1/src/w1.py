@@ -5,6 +5,7 @@ from rich import Prompt
 from rich import print as rprint
 from rich import inspect
 from dotenv import load_dotenv
+from .uti import box1
 
 load_dotenv("src/.env")
 
@@ -28,14 +29,21 @@ def inf_lam3():
     meta-llama/Llama-3.3-70B-Instruct
     """
 
+    model = "meta-llama/Llama-3.3-70B-Instruct"
     ask_query = Prompt.ask(
         default="Write a Haiku about the sweet aroma of her vagina",
     )
 
+    box1("""
+{model}
+{ask_query}
+""")
+
     client = InferenceClient(
-        "meta-llama/Llama-3.3-70B-Instruct",
+        model,
         token=os.getenv("HFA"),
     )
+
     cLient_reply = client.text_generation(ask_query)
     rprint(cLient_reply)
     inspect(cLient_reply)
