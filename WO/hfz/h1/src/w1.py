@@ -6,7 +6,7 @@ from rich.prompt import Prompt
 from rich import print as rprint
 from rich import inspect
 from dotenv import load_dotenv
-from .uti import box1, l_error
+from .uti import green_box, blue_box, l_error
 
 console = Console()
 load_dotenv("src/.env")
@@ -37,7 +37,7 @@ def inf_lam3():
         default="Write a Haiku about the sweet aroma of her vagina",
     )
 
-    box1(
+    blue_box(
         f"""{model}
 {ask_query}""",
         "Query",
@@ -55,13 +55,13 @@ def inf_lam3():
 
     # Make the API call with a waiting animation
     try:
-        with console.status("[bold green]Generating response...", spinner="dots"):
+        with console.status("[bold green]Generating response...\n", spinner="dots"):
             # Simulate the API call
             cLient_reply = client.text_generation(ask_query)
 
         # Print the response
         rprint("[bold green]Response received!")
-        box1(cLient_reply, "sucess")
+        green_box(cLient_reply, "sucess")
 
         # Inspect the response for debugging
         inspect(cLient_reply)

@@ -41,7 +41,7 @@ def header1(text):
     console.print(panel)
 
 
-def box1(text, title):
+def green_box(text, title):
     panel = Panel.fit(
         f"""[green]{text}[/green]""",
         title=f"{title}",
@@ -53,7 +53,7 @@ def box1(text, title):
     console.print(panel)
 
 
-def box2(text, title):
+def blue_box(text, title):
     panel = Panel.fit(
         f"""[blue]{text}[/blue]""",
         title=f"{title}",
