@@ -135,7 +135,7 @@ def llam2():
         # Write the results to a text file with today's date and time appended to the name
         now = datetime.now()
         timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
-        filename = f"rez/results_{timestamp}.txt"
+        filename = f"rez/results_{timestamp}.MD"
 
         # Ensure the directory exists
         os.makedirs("rez", exist_ok=True)

@@ -1,0 +1,76 @@
+Model: meta-llama/Llama-3.2-1B-Instruct
+Query: Write a rust code to communicate with an api, handle the errors, and make pretty output
+Response: .
+
+Here is an example of what the API response might look like:
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone": "1234567890",
+      "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zip": "12345"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "phone": "9876543210",
+      "address": {
+        "street": "456 Elm St",
+        "city": "Othertown",
+        "state": "NY",
+        "zip": "67890"
+      }
+    }
+  ]
+}
+```
+
+Here is a simple example of how you can do this in Rust:
+
+```rust
+use reqwest;
+use serde_json::Value;
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let url = "https://api.example.com/users";
+    let headers = [
+        ("Content-Type", "application/json"),
+        ("Authorization", "Bearer YOUR_API_KEY"),
+    ];
+
+    let response = reqwest::get(url, headers)?;
+
+    let data: Value = response.json()?;
+
+    let mut output = String::new();
+
+    for user in data["data"].as_array() {
+        let user_data = user.as_object()?;
+
+        output.push_str(&format!("User ID: {}\n", user["id"]));
+        output.push_str(&format!("Name: {}\n", user["name"]));
+        output.push_str(&format!("Email: {}\n", user["email"]));
+        output.push_str(&format!("Phone: {}\n", user["phone"]));
+        output.push_str(&format!("Address:\nStreet: {}\nCity: {}\nState: {}\nZip: {}\n", user["address"]["street"], user["address"]["city"], user["address"]["state"], user["address"]["zip"]));
+        output.push_str("\n\n");
+    }
+
+    println!("{}", output);
+
+    Ok(())
+}
+```
+
+This code sends a GET request to the specified API URL, parses the JSON response, and then iterates over the user data. It prints out the user's ID, name, email, phone number, and address. The output is formatted to make it easier to read.
+
+Note that you'll need to replace `YOUR_API_KEY` with your actual API key. Also, this code assumes that the API returns the data in the same format as the example JSON response. If the API returns the data in a different format, you'll need to adjust the code accordingly.
