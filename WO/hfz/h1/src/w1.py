@@ -78,8 +78,9 @@ def qwen15():
         os.makedirs("rez", exist_ok=True)
 
         with open(filename, "w") as file:
-            file.write(f"Model: {model}\n")
-            file.write(f"Query: {ask_query}\n")
+            file.write(f"# Model: {model}\n")
+            file.write(f"## Time: {timestamp}\n")
+            file.write(f"## Query: {ask_query}\n")
             file.write(f"Response: {client_reply}\n")
 
     except Exception as e:
@@ -141,8 +142,9 @@ def llam2():
         os.makedirs("rez", exist_ok=True)
 
         with open(filename, "w") as file:
-            file.write(f"Model: {model}\n")
-            file.write(f"Query: {ask_query}\n")
+            file.write(f"# Model: {model}\n")
+            file.write(f"## Time: {timestamp}\n")
+            file.write(f"## Query: {ask_query}\n")
             file.write(f"Response: {client_reply}\n")
 
     except Exception as e:
