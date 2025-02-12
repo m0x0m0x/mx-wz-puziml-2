@@ -38,8 +38,7 @@ def inf_lam3():
 
     box1(
         f"""{model}
-{ask_query}
-""",
+{ask_query}""",
         "Query",
     )
 
