@@ -20,7 +20,12 @@ def display_menu():
     # Create a fancy panel for the menu
     menu_text = "\n".join(options)
     console.print(
-        Panel(menu_text, title="Menu", title_align="left", border_style="green")
+        Panel.fit(
+            menu_text,
+            title="Choose Model to Query",
+            title_align="left",
+            border_style="green",
+        )
     )
 
     # Get user input

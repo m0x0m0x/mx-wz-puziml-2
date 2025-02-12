@@ -73,25 +73,6 @@ wheels = [
 ]
 
 [[package]]
-name = "h1"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "huggingface-hub" },
-    { name = "python-dotenv" },
-    { name = "requests" },
-    { name = "rich" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "huggingface-hub", specifier = ">=0.28.1" },
-    { name = "python-dotenv", specifier = ">=1.0.1" },
-    { name = "requests", specifier = ">=2.32.3" },
-    { name = "rich", specifier = ">=13.9.4" },
-]
-
-[[package]]
 name = "huggingface-hub"
 version = "0.28.1"
 source = { registry = "https://pypi.org/simple" }
@@ -107,6 +88,25 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e7/ce/a734204aaae6c35a22f9956ebcd8d8708ae5b842e15d6f42bd6f49e634a4/huggingface_hub-0.28.1.tar.gz", hash = "sha256:893471090c98e3b6efbdfdacafe4052b20b84d59866fb6f54c33d9af18c303ae", size = 387074 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ea/da/6c2bea5327b640920267d3bf2c9fc114cfbd0a5de234d81cda80cc9e33c8/huggingface_hub-0.28.1-py3-none-any.whl", hash = "sha256:aa6b9a3ffdae939b72c464dbb0d7f99f56e649b55c3d52406f49e0a5a620c0a7", size = 464068 },
+]
+
+[[package]]
+name = "huggingheras"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "python-dotenv" },
+    { name = "requests" },
+    { name = "rich" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "huggingface-hub", specifier = ">=0.28.1" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+    { name = "requests", specifier = ">=2.32.3" },
+    { name = "rich", specifier = ">=13.9.4" },
 ]
 
 [[package]]
