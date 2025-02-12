@@ -4,7 +4,7 @@ from src.w1 import inf_cl1, inf_lam3
 
 
 def main():
-    inf_cl1()
+    inf_lam3()
 
 
 if __name__ == "__main__":

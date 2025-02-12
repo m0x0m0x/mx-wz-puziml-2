@@ -1,12 +1,14 @@
 # Main work here
 import os
 from huggingface_hub import InferenceClient
-from rich import Prompt
+from rich.console import Console
+from rich.prompt import Prompt
 from rich import print as rprint
 from rich import inspect
 from dotenv import load_dotenv
 from .uti import box1
 
+console = Console()
 load_dotenv("src/.env")
 
 
@@ -39,11 +41,29 @@ def inf_lam3():
 {ask_query}
 """)
 
-    client = InferenceClient(
-        model,
-        token=os.getenv("HFA"),
-    )
+    # Initialize the inference client
+    try:
+        client = InferenceClient(
+            model=model,
+            token=os.getenv("HFA"),  # Ensure HFA token is set in your environment
+        )
+    except Exception as e:
+        console.log(f"[bold red]Failed to initialize the inference client: {e}")
+        return
 
-    cLient_reply = client.text_generation(ask_query)
-    rprint(cLient_reply)
-    inspect(cLient_reply)
+    # Make the API call with a waiting animation
+    try:
+        with console.status("[bold green]Generating response...", spinner="dots"):
+            # Simulate the API call
+            cLient_reply = client.text_generation(ask_query)
+
+        # Print the response
+        rprint("[bold green]Response received!")
+        rprint(cLient_reply)
+
+        # Inspect the response for debugging
+        inspect(cLient_reply)
+
+    except Exception as e:
+        # Handle errors during the API call
+        console.log(f"[bold red]Error during inference: {e}")
