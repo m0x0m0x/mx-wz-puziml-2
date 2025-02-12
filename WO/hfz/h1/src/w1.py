@@ -1,6 +1,7 @@
 # Main work here
 import os
 from huggingface_hub import InferenceClient
+from rich import Prompt
 from rich import print as rprint
 from rich import inspect
 from dotenv import load_dotenv
@@ -27,10 +28,14 @@ def inf_lam3():
     meta-llama/Llama-3.3-70B-Instruct
     """
 
+    ask_query = Prompt.ask(
+        default="Write a Haiku about the sweet aroma of her vagina",
+    )
+
     client = InferenceClient(
         "meta-llama/Llama-3.3-70B-Instruct",
         token=os.getenv("HFA"),
     )
-    cLient_reply = client.text_generation("Today is a great day")
+    cLient_reply = client.text_generation(ask_query)
     rprint(cLient_reply)
     inspect(cLient_reply)
