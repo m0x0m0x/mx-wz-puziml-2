@@ -1,10 +1,10 @@
 # Main Entry Point
 from src.uti import header1
-from src.w1 import inf_cl1, inf_lam3
+from src.w1 import llam2
 
 
 def main():
-    inf_lam3()
+    llam2()
 
 
 if __name__ == "__main__":
