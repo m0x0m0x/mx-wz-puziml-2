@@ -36,10 +36,12 @@ def inf_lam3():
         default="Write a Haiku about the sweet aroma of her vagina",
     )
 
-    box1("""
-{model}
+    box1(
+        f"""{model}
 {ask_query}
-""")
+""",
+        "Query",
+    )
 
     # Initialize the inference client
     try:

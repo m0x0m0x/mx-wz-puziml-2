@@ -44,7 +44,7 @@ def header1(text):
 def box1(text, title):
     panel = Panel.fit(
         f"""[green]{text}[/green]""",
-        title="{title}",
+        title=f"{title}",
         subtitle=":>",
         style="Bold",
         border_style="dark_green",
