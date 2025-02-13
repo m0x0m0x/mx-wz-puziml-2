@@ -7,7 +7,7 @@ install(show_locals=True)
 
 # -- Greeter Function
 def f1_greeter(name, intensity):
-    return "Hello, " + name + "!" * int(intensity)
+    return "Hello, " + name + "!<<>>>" * int(intensity)
 
 
 def f1_greeter_launch(function=f1_greeter):
