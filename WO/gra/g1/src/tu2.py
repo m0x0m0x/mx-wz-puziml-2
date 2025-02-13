@@ -7,9 +7,7 @@ install(show_locals=True)
 
 def f1_greet():
     def greet(name):
-        if not name:  # Handles empty input
-            return "Lick ninas pussy 😏"
-        return f"Lick {name} pussy 😜"
+        return f"Lick {name if name else 'unknown'} pussy 😜"
 
     demo = gr.Interface(
         fn=greet,
