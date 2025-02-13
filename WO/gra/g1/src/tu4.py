@@ -118,6 +118,7 @@ def get_temp():
         city = message.capitalize()
         return weather_data.get(city, "No City Like That")
 
-    temp_inter = gr.ChatInterface(get_temperature, title="Weather Bot", css=custom_css)
+        with gr.Blocks(css=custom_css) as temp_inter:
+            gr.ChatInterface(get_temperature, title="Weather Bot")
 
-    temp_inter.launch()
+        temp_inter.launch()
