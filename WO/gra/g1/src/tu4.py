@@ -2,6 +2,7 @@
 
 import gradio as gr
 import random
+import requests as rq
 from .utilz import header1
 from dotenv import load_dotenv
 from rich.traceback import install
@@ -98,11 +99,10 @@ def count_words():
 
 # --- Getting Temparatures from a city ---
 def get_temp():
-    import requests
-
     def get_temperature(city):
+        api_key = os.getenv("OPM")
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=YOUR_API_KEY"
-        response = requests.get(url)
+        response = rq.get(url)
         data = response.json()
         temperature = data["main"]["temp"]
         return f"The temperature in {city} is {temperature}K"
