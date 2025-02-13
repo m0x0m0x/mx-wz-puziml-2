@@ -1,8 +1,8 @@
-from src.tu4 import ran_res
+from src.tu4 import kalk
 
 
 def main():
-    ran_res()
+    kalk()
 
 
 if __name__ == "__main__":
