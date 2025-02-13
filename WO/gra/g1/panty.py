@@ -1,8 +1,8 @@
-from src.tu4 import ran_jokes
+from src.joker import jokerz
 
 
 def main():
-    ran_jokes()
+    jokerz()
 
 
 if __name__ == "__main__":
