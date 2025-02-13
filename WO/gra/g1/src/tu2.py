@@ -40,3 +40,24 @@ def f2_rev_string():
     )
 
     demo.launch()
+
+
+# -- Classifier Example
+def f3_cl_img():
+    header1("Gradio Interface - Image Classifier DUMMY")
+
+    def classify_image(img):
+        return {
+            "cat": 0.8,
+            "dog": 0.1,
+            "fish": 0.05,
+            "horse": 0.03,
+            "human": 0.02,
+        }
+
+    demo = gr.Interface(
+        inputs="image",
+        outputs="label",
+    )
+
+    demo.launch()

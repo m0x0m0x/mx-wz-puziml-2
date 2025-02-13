@@ -1,8 +1,8 @@
-from src.tu2 import f2_rev_string
+from src.tu2 import f3_cl_img
 
 
 def main():
-    f2_rev_string()
+    f3_cl_img()
 
 
 if __name__ == "__main__":
