@@ -93,7 +93,7 @@ def f5_tmpc():
         return (f - 32) * 5.0 / 9.0
 
     def fahrenheit_to_celsius(f):
-        far_to_cel(f)
+        return far_to_cel(f)
 
     demo = gr.Interface(
         fn=fahrenheit_to_celsius,
