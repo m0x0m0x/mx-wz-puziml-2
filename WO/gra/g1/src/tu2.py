@@ -1,11 +1,15 @@
 # Work for tutorial 2 - Masterer Gradio Interface in 2025 Easier thatn you think
 import gradio as gr
+from .utilz import header1
 from rich.traceback import install
 
 install(show_locals=True)
 
 
+# --- Basic Greeter Function ---
 def f1_greet():
+    header1("Gradio Interface - Basic Greeter Function")
+
     def greet(name):
         return f"Lick {name if name else 'unknown'} pussy 😜"
 
@@ -15,6 +19,24 @@ def f1_greet():
         outputs="text",
         title="Booty Smellz",
         description="LickSniffing",
+    )
+
+    demo.launch()
+
+
+# --- String Reversal Fnction ---
+def f2_rev_string():
+    header1("Gradio Interface - String Reversal Function")
+
+    def rev_string(s):
+        return s[::-1]
+
+    demo = gr.Interface(
+        fn=rev_string,
+        inputs="text",
+        outputs="text",
+        title="String Reversal",
+        description="Reverse a string",
     )
 
     demo.launch()

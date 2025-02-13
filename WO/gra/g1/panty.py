@@ -1,10 +1,8 @@
-from src.utilz import header1
-from src.tu2 import f1_greet
+from src.tu2 import f2_rev_string
 
 
 def main():
-    header1("Tu2 - Functions")
-    f1_greet()
+    f2_rev_string()
 
 
 if __name__ == "__main__":
