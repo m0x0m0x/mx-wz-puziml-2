@@ -6,14 +6,16 @@ install(show_locals=True)
 
 
 def f1_greet():
-    def greet(name="ina"):
-        return f"Lick {name} pussy "
+    def greet(name):
+        if not name:  # Handles empty input
+            return "Lick ninas pussy 😏"
+        return f"Lick {name} pussy 😜"
 
     demo = gr.Interface(
         fn=greet,
         inputs="text",
         outputs="text",
-        title=[gr.Markdown("# Booty Smells")],
+        title="Booty Smellz",
         description="LickSniffing",
     )
 
