@@ -13,7 +13,7 @@ install(show_locals=True)
 def ran_res():
     header1("Random Response Generator")
 
-    def get_response(input_text):
+    def get_response(message, history):
         responses = [
             "I am sorry, I don't understand.",
             "I am not sure I understand.",
