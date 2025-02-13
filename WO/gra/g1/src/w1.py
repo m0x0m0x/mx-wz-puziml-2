@@ -18,4 +18,4 @@ def f1_greeter_launch(function=f1_greeter):
         inputs=["text", "slider"],
         outputs=["text"],
     )
-    f1l.launch()
+    f1l.launch(share=True)
