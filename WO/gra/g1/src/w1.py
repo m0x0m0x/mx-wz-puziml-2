@@ -12,7 +12,8 @@ def f1_greeter(name, intensity):
 
 def f1_greeter_launch(function=f1_greeter):
     f1l = gr.Interface(
-        title="Greeter \n What are u doing \n Make it happen",
+        title="Gringo Booty Dancee",
+        description="This is a one bad niggaz That is the main yaya ",
         fn=function,
         inputs=["text", "slider"],
         outputs=["text"],
