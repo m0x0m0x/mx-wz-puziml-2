@@ -82,3 +82,25 @@ def f4_sent():
     )
 
     demo.launch()
+
+
+# -- Temeprature Converter ---
+def f5_tmpc():
+    header1("Gradio Interface - Temperature Converter")
+
+    # Writing a seperate function that eill be called in the main function
+    def far_to_cel(f):
+        return (f - 32) * 5.0 / 9.0
+
+    def fahrenheit_to_celsius(f):
+        far_to_cel(f)
+
+    demo = gr.Interface(
+        fn=fahrenheit_to_celsius,
+        inputs="number",
+        outputs="number",
+        title="Fahrenheit to Celsius",
+        description="Convert Fahrenheit to Celsius",
+    )
+
+    demo.launch()

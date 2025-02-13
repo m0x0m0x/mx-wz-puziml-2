@@ -1,8 +1,8 @@
-from src.tu2 import f4_sent
+from src.tu2 import f5_tmpc
 
 
 def main():
-    f4_sent()
+    f5_tmpc()
 
 
 if __name__ == "__main__":
