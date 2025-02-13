@@ -21,3 +21,15 @@ def f1_greeter_launch(function=f1_greeter):
         outputs=["text"],
     )
     f1l.launch()
+
+
+# --- Multiply Funcion --
+
+
+def f1_mul(n1, n2):
+    return n1 * n2
+
+
+def fi_mul_launch():
+    inp = [gr.Number(label="Number1"), gr.Number(label="Number2")]
+    out = gr.Textbox(label="Result")
