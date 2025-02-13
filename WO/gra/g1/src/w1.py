@@ -6,25 +6,25 @@ install(show_locals=True)
 
 
 # -- Greeter Function
-def f1_greeter(name, intensity):
-    return "Hello, " + name + "!<<>>>" * int(intensity)
+def f1_greeter():
+    def f1_greeter(name, intensity):
+        return "Hello, " + name + "!<<>>>" * int(intensity)
 
-
-def f1_greeter_launch(function=f1_greeter):
-    f1l = gr.Interface(
-        title="""Gringo Booty Dancee
-        This is the second line of the title
-        And this is the third line""",
-        description="This is a one bad niggaz That is the main yaya ",
-        fn=function,
-        inputs=["text", "slider"],
-        outputs=["text"],
-    )
-    f1l.launch()
+    def f1_greeter_launch(function=f1_greeter):
+        f1l = gr.Interface(
+            title="""Gringo Booty Dancee
+            This is the second line of the title
+            And this is the third line""",
+            description="This is a one bad niggaz That is the main yaya ",
+            fn=function,
+            inputs=["text", "slider"],
+            outputs=["text"],
+        )
+        f1l.launch()
 
 
 # --- f2 = Multiply Funcion --
-def f2_mul_launch():
+def f2_mul():
     # --- Sub-function: Multiply ---
     def f2_mul(n1, n2):
         return n1 * n2
