@@ -91,3 +91,23 @@ def count_words():
     )
 
     demo.launch()
+
+
+# --- Getting Temparatures from a city ---
+def get_temp():
+    import requests
+
+    def get_temperature(city):
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=YOUR_API_KEY"
+        response = requests.get(url)
+        data = response.json()
+        temperature = data["main"]["temp"]
+        return f"The temperature in {city} is {temperature}K"
+
+    temp_inter = gr.ChatInterface(
+        get_temperature,
+        type="text",
+        title="Get Temperature",
+    )
+
+    temp_inter.launch()
