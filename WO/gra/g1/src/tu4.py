@@ -21,12 +21,10 @@ def ran_res():
         ]
         return random.choice(responses)
 
-    demo = gr.Interface(
-        fn=get_response,
-        inputs="text",
-        outputs="text",
-        title="Random Response Generator",
-        description="Generate random responses",
+    demo = gr.ChatInterface(
+        get_response,
+        type="messages",
+        title="Chat with Random Response Generator",
     )
 
     demo.launch()
