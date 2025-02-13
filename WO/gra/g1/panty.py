@@ -1,8 +1,8 @@
-from src.joker import jokerz
+from src.tu4 import count_words
 
 
 def main():
-    jokerz()
+    count_words()
 
 
 if __name__ == "__main__":

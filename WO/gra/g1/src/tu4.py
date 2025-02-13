@@ -78,3 +78,16 @@ def ran_jokes():
     )
 
     demo.launch()
+
+
+# --- Counts number of works in a message ---
+def count_words():
+    def count_words(message, history):
+        return f"Message contains {len(message.split())} words."
+
+    demo = gr.ChatInterface(
+        count_words,
+        title="Count Words",
+    )
+
+    demo.launch()
