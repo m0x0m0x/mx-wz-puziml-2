@@ -99,18 +99,26 @@ def count_words():
 
 # --- Getting Temparatures from a city ---
 def get_temp():
-    def get_temperature(city):
-        api_key = os.getenv("OPM")
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=YOUR_API_KEY"
-        response = rq.get(url)
-        data = response.json()
-        temperature = data["main"]["temp"]
-        return f"The temperature in {city} is {temperature}K"
+    weather_data = {
+        "London": "Cloudy, 10C",
+        "New York": "Sunny, 18C",
+        "Tokyo": "Rainy, 12C",
+        "Paris": "Clear, 22C",
+        "Berlin": "Windy, 5C",
+        "Sydney": "Partly Cloudy, 25C",
+        "Moscow": "Snowy, -2C",
+        "Los Angeles": "Sunny, 20C",
+        "Mumbai": "Humid, 30C",
+        "Cape Town": "Breezy, 15C",
+    }
+
+    def get_temperature(message, history):
+        city = message.capitalize()
+        return weather_data.get(city, "City Not Found")
 
     temp_inter = gr.ChatInterface(
         get_temperature,
-        type="text",
-        title="Get Temperature",
+        title="Weather Bot",
     )
 
     temp_inter.launch()
