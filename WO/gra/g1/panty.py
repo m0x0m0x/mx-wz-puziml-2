@@ -1,8 +1,8 @@
-from src.tu2 import f5_tmpc
+from src.tu3 import gen_qr
 
 
 def main():
-    f5_tmpc()
+    gen_qr()
 
 
 if __name__ == "__main__":

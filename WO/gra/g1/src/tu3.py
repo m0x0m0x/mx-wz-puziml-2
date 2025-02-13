@@ -9,6 +9,8 @@ install(show_locals=True)
 
 
 def gen_qr():
+    header1("QR Code Generator")
+
     def make_qr(data):
         qr = qrcode.QRCode(
             version=1,
@@ -20,3 +22,13 @@ def gen_qr():
         qr.make(fit=True)
         img = qr.make_image(fill_color="black", back_color="white")
         return img
+
+    demo = gr.Interface(
+        fn=make_qr,
+        inputs="text",
+        outputs="image",
+        title="QR Code Generator",
+        description="Generate QR Codes",
+    )
+
+    demo.launch()
