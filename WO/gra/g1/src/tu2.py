@@ -3,3 +3,12 @@ import gradio as gr
 from rich.traceback import install
 
 install(show_locals=True)
+
+
+def f1_greet():
+    def greet(name="ina"):
+        return f"Lick {name} pussy "
+
+    demo = gr.Interface(fn=greet, inputs="text", outputs="text")
+
+    demo.launch()
