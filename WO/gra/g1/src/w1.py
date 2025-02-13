@@ -24,14 +24,18 @@ def f1_greeter_launch(function=f1_greeter):
 
 
 # --- f2 = Multiply Funcion --
-def f2_mul(n1, n2):
-    return n1 * n2
-
-
 def f2_mul_launch():
-    inp = [gr.Number(label="Number1"), gr.Number(label="Number2")]
-    out = gr.Textbox(label="Result")
+    # --- Sub-function: Multiply ---
+    def f2_mul(n1, n2):
+        return n1 * n2
 
-    f2mul = gr.Interface(fn=f2_mul, inputs=inp, outputs=out, title="MuliPussy")
+    # --- Gradio Interface ---
+    f2mul = gr.Interface(
+        fn=f2_mul,
+        inputs=[gr.Number(label="Number1"), gr.Number(label="Number2")],
+        outputs=gr.Textbox(label="Result"),
+        title="MuliPussy",
+        description="Where do you go",
+    )
 
     f2mul.launch()
