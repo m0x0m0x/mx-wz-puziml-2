@@ -1,8 +1,8 @@
-from src.tu2 import f3_cl_img
+from src.tu2 import f4_sent
 
 
 def main():
-    f3_cl_img()
+    f4_sent()
 
 
 if __name__ == "__main__":

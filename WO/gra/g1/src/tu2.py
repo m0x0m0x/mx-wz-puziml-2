@@ -64,3 +64,21 @@ def f3_cl_img():
     )
 
     demo.launch()
+
+
+# --- Sentiment Analysis ---
+def f4_sent():
+    header1("Gradio Interface - Sentiment Analysis")
+
+    def sentiment_analysis(text):
+        return "Positive" if "good" in text else "Negative"
+
+    demo = gr.Interface(
+        fn=sentiment_analysis,
+        inputs="text",
+        outputs="text",
+        title="Sentiment Analysis",
+        description="Classify text as positive or negative",
+    )
+
+    demo.launch()
