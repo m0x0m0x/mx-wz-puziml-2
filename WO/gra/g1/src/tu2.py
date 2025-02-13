@@ -9,6 +9,6 @@ def f1_greet():
     def greet(name="ina"):
         return f"Lick {name} pussy "
 
-    demo = gr.Interface(fn=greet, inputs="text", outputs="text")
+    demo = gr.Interface(fn=greet, inputs="text", outputs="text", title=[])
 
     demo.launch()
