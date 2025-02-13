@@ -12,10 +12,8 @@ def f1_greeter(name, intensity):
 
 def f1_greeter_launch(function=f1_greeter):
     iface = gr.Interface(
-        demo=gr.Interface(
-            fn=function,
-            inputs=["text", "slider"],
-            outputs=["text"],
-        )
+        fn=function,
+        inputs=["text", "slider"],
+        outputs=["text"],
     )
     iface.launch()
