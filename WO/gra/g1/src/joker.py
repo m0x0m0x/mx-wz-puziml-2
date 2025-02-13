@@ -1,5 +1,6 @@
 import gradio as gr
 import asyncio
+from .utilz import header1
 from jokeapi import Jokes  # Import JokeAPI
 from rich.traceback import install
 
@@ -7,12 +8,13 @@ install(show_locals=True)
 
 
 def jokerz():
+    header1("Get Random Jokes From API")
     """Main function containing all sub-functions for fetching and displaying jokes."""
 
     async def get_joke():
         """Fetch a random joke asynchronously from JokeAPI."""
         j = Jokes()  # ✅ Initialize normally (no await)
-        joke = await j.get_joke()  # ✅ Await only the actual API call
+        joke = j.get_joke()  # ✅ Await only the actual API call
 
         if isinstance(joke, list):  # ❌ Prevent 'list can't be used in await'
             joke = joke[0]  # Take the first joke
