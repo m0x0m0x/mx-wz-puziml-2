@@ -12,13 +12,10 @@ def f1_greeter(name, intensity):
 
 def f1_greeter_launch():
     iface = gr.Interface(
-        fn=f1_greeter,
-        inputs=[
-            gr.inputs.Textbox(name="name"),
-            gr.inputs.Slider(minimum=1, maximum=10, default=1, label="intensity"),
-        ],
-        outputs="text",
-        title="Greeter",
-        description="Say hello to someone!",
+        demo=gr.Interface(
+            fn=f1_greeter,
+            inputs=["text", "slider"],
+            outputs=["text"],
+        )
     )
     iface.launch()
