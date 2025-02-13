@@ -33,8 +33,6 @@ def ran_res():
 
 
 def kalk():
-    header1("Simple Calculator")
-
     def calc(num1, num2, operation):
         if operation == "Add":
             return num1 + num2
@@ -43,19 +41,18 @@ def kalk():
         elif operation == "Multiply":
             return num1 * num2
         elif operation == "Divide":
-            return num1 / num2
+            return num1 / num2 if num2 != 0 else "Error: Division by zero"
 
     calc_inter = gr.Interface(
         fn=calc,
         inputs=[
-            gr.inputs.Number(label="Number 1"),
-            gr.inputs.Number(label="Number 2"),
-            gr.inputs.Radio(
-                ["Add", "Subtract", "Multiply", "Divide"], label="Operation"
-            ),
+            gr.Number(label="Number 1"),
+            gr.Number(label="Number 2"),
+            gr.Radio(["Add", "Subtract", "Multiply", "Divide"], label="Operation"),
         ],
-        outputs="number",
+        outputs=gr.Number(label="Result"),  # Updated output format
         title="Simple Calculator",
+        description="Perform basic arithmetic operations.",
     )
 
     calc_inter.launch()
