@@ -16,8 +16,8 @@ def jokerz():
         """Fetch a random joke from JokeAPI synchronously."""
 
         async def get_joke():
-            j = await Jokes()  # Initialize the class
-            joke = await j.get_joke()  # Retrieve a random joke
+            j = Jokes()  # Initialize the class
+            joke = j.get_joke()  # Retrieve a random joke
             return (
                 joke["joke"]
                 if joke["type"] == "single"
