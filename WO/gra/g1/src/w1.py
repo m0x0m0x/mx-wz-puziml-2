@@ -32,8 +32,6 @@ def f2_mul_launch():
     inp = [gr.Number(label="Number1"), gr.Number(label="Number2")]
     out = gr.Textbox(label="Result")
 
-    f2mul = gr.Interface(
-        fn=f2_mul, inputs=inp, outputs=out, title="MuliPussy", descripton="FuckAllnight"
-    )
+    f2mul = gr.Interface(fn=f2_mul, inputs=inp, outputs=out, title="MuliPussy")
 
     f2mul.launch()
