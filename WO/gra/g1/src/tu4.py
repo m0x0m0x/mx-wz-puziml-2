@@ -1,6 +1,8 @@
 # Building a chatbot interface using gradio
 
 import gradio as gr
+from .stylez import custom_css
+
 import random
 import requests as rq
 from .utilz import header1
@@ -116,9 +118,6 @@ def get_temp():
         city = message.capitalize()
         return weather_data.get(city, "No City Like That")
 
-    temp_inter = gr.ChatInterface(
-        get_temperature,
-        title="Weather Bot",
-    )
+    temp_inter = gr.ChatInterface(get_temperature, title="Weather Bot", css=custom_css)
 
     temp_inter.launch()
