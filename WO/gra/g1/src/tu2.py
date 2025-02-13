@@ -56,6 +56,9 @@ def f3_cl_img():
         }
 
     demo = gr.Interface(
+        title="Bogus Image Classifier",
+        description="This is a dummy image classifier",
+        fn=classify_image,
         inputs="image",
         outputs="label",
     )
