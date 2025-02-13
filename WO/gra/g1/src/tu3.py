@@ -9,8 +9,7 @@ install(show_locals=True)
 
 
 def gen_qr():
-
-    def make_qr(data)
+    def make_qr(data):
         qr = qrcode.QRCode(
             version=1,
             error_correction=qrcode.constants.ERROR_CORRECT_L,
