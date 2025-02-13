@@ -1,8 +1,8 @@
-from src.tu3 import gen_qr
+from src.tu4 import ran_res
 
 
 def main():
-    gen_qr()
+    ran_res()
 
 
 if __name__ == "__main__":
