@@ -1,8 +1,7 @@
-from src.tu4 import get_temp
-
+from src.tu5 import kalk_tab
 
 def main():
-    get_temp()
+    kalk_tab()
 
 
 if __name__ == "__main__":
