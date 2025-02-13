@@ -23,13 +23,17 @@ def f1_greeter_launch(function=f1_greeter):
     f1l.launch()
 
 
-# --- Multiply Funcion --
-
-
-def f1_mul(n1, n2):
+# --- f2 = Multiply Funcion --
+def f2_mul(n1, n2):
     return n1 * n2
 
 
-def fi_mul_launch():
+def f2_mul_launch():
     inp = [gr.Number(label="Number1"), gr.Number(label="Number2")]
     out = gr.Textbox(label="Result")
+
+    f2mul = gr.Interface(
+        fn=f2_mul, inputs=inp, outputs=out, title="MuliPussy", descripton="FuckAllnight"
+    )
+
+    f2mul.launch()

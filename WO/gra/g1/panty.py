@@ -1,8 +1,10 @@
-from src.w1 import f1_greeter_launch
+from src.w1 import f1_greeter_launch, f2_mul_launch
+from src.utilz import header1
 
 
 def main():
-    f1_greeter_launch()
+    header1("f2 - Multiply")
+    f2_mul_launch()
 
 
 if __name__ == "__main__":
