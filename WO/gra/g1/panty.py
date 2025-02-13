@@ -1,7 +1,8 @@
-from src.tu5 import kalk_tab
+from src.doks import streaming_chat_example
+
 
 def main():
-    kalk_tab()
+    streaming_chat_example()
 
 
 if __name__ == "__main__":
