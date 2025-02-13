@@ -56,3 +56,25 @@ def kalk():
     )
 
     calc_inter.launch()
+
+
+# --- Random Jokes
+def ran_jokes():
+    header1("Random Jokes")
+
+    def get_joke(message, history):
+        jokes = [
+            "Why did the scarecrow win an award? Because he was outstanding in his field.",
+            "What do you call a fish wearing a crown? A king fish.",
+            "Why don't scientists trust atoms? Because they make up everything.",
+            "What do you get when you cross a snowman with a vampire? Frostbite.",
+        ]
+        return random.choice(jokes)
+
+    demo = gr.ChatInterface(
+        get_joke,
+        type="messages",
+        title="Chat with Random Response Generator",
+    )
+
+    demo.launch()

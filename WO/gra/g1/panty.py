@@ -1,8 +1,8 @@
-from src.tu4 import kalk
+from src.tu4 import ran_jokes
 
 
 def main():
-    kalk()
+    ran_jokes()
 
 
 if __name__ == "__main__":
