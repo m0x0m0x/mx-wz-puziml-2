@@ -10,10 +10,10 @@ def f1_greeter(name, intensity):
     return "Hello, " + name + "!" * int(intensity)
 
 
-def f1_greeter_launch():
+def f1_greeter_launch(function=f1_greeter):
     iface = gr.Interface(
         demo=gr.Interface(
-            fn=f1_greeter,
+            fn=function,
             inputs=["text", "slider"],
             outputs=["text"],
         )
