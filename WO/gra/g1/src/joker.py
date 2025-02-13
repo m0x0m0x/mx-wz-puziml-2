@@ -1,14 +1,9 @@
 import gradio as gr
 import asyncio
-from .utilz import header1
 from jokeapi import Jokes  # Import JokeAPI
-from rich.traceback import install
-
-install(show_locals=True)
 
 
 def jokerz():
-    header1("Get Random Jokes From API")
     """Main function containing all sub-functions for fetching and displaying jokes."""
 
     async def get_joke():
