@@ -1,8 +1,8 @@
-from src.tu4 import count_words
+from src.tu4 import get_temp
 
 
 def main():
-    count_words()
+    get_temp()
 
 
 if __name__ == "__main__":

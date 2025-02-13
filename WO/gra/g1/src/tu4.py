@@ -114,7 +114,7 @@ def get_temp():
 
     def get_temperature(message, history):
         city = message.capitalize()
-        return weather_data.get(city, "City Not Found")
+        return weather_data.get(city, "No City Like That")
 
     temp_inter = gr.ChatInterface(
         get_temperature,
