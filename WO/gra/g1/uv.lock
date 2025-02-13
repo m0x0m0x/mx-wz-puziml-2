@@ -204,6 +204,7 @@ dependencies = [
     { name = "pillow" },
     { name = "python-dotenv" },
     { name = "qrcode" },
+    { name = "requests" },
     { name = "rich" },
     { name = "simplejson" },
 ]
@@ -217,6 +218,7 @@ requires-dist = [
     { name = "pillow", specifier = ">=11.1.0" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "qrcode", specifier = ">=8.0" },
+    { name = "requests", specifier = ">=2.32.3" },
     { name = "rich", specifier = ">=13.9.4" },
     { name = "simplejson", specifier = ">=3.19.3" },
 ]

@@ -3,7 +3,10 @@
 import gradio as gr
 import random
 from .utilz import header1
+import python-dotenv
 from rich.traceback import install
+
+load.env('src/.env')
 
 install(show_locals=True)
 
