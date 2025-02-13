@@ -2,12 +2,12 @@
 
 custom_css = """
     .message {
-        background-color: white;  /* Bright Green background */
+        background-color: #020617;  /* Bright Green background */
         color: white;  /* White text inside bubble */
         border: 2px solid #32CD32;  /* Green border around chat bubble */
         padding: 2px;
         border-radius: 10px;
-        font-size: 18px;  /* Larger text */
+        font-size: 28px;  /* Larger text */
     }
 
     .input-message {
