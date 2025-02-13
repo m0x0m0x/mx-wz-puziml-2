@@ -12,7 +12,7 @@ def f1_greeter(name, intensity):
 
 def f1_greeter_launch(function=f1_greeter):
     f1l = gr.Interface(
-        title="Greeter",
+        title="Greeter \n What are u doing \n Make it happen",
         fn=function,
         inputs=["text", "slider"],
         outputs=["text"],
