@@ -2,12 +2,7 @@ from src.joker import jokerz
 
 
 def main():
-    jkapp()
-
-
-def jkapp():
-    jokeapp = jokerz()  # ✅ Only need to call one function!
-    jokeapp.launch()
+    jokerz()
 
 
 if __name__ == "__main__":

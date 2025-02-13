@@ -47,4 +47,6 @@ def jokerz():
             description="Chat and get random jokes from JokeAPI!",
         )
 
-    return run_interface()
+    # ✅ Auto-launch inside this function
+    demo = run_interface()
+    demo.launch()  # ✅ LAUNCHES AUTOMATICALLY
