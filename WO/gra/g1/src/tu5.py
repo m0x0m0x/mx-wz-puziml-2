@@ -11,8 +11,13 @@ install(show_locals=True)
 # --- Tabbed Interface ---
 
 
-def bas_cal(n1, op, n2):
-    if op == "add":
-        return n1 + n2
-    elif op == "sub":
-        return
+def kalk_tab():
+    def bas_cal(n1, op, n2):
+        if op == "add":
+            return n1 + n2
+        elif op == "sub":
+            return n1 - n2
+        elif op == "mul":
+            return n1 * n2
+        elif op == "div":
+            return n1 / n2
