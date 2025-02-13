@@ -40,31 +40,3 @@ def kalk_tab():
             return math.sqrt(n1)
 
     # Tabbed Interface
-    tabbed_inter = gr.TabbedInterface(
-        tabs=[
-            gr.Interface(
-                fn=bas_cal,
-                inputs=[
-                    gr.Number(label="Number 1"),
-                    gr.Radio(["add", "sub", "mul", "div"], label="Operation"),
-                    gr.Number(label="Number 2"),
-                ],
-                outputs=gr.Number(label="Result"),
-                title="Basic Calculator",
-                description="Perform basic arithmetic operations.",
-            ),
-            gr.Interface(
-                fn=sci_cal,
-                inputs=[
-                    gr.Number(label="Number 1"),
-                    gr.Radio(["sin", "cos", "tan", "log", "sqrt"], label="Operation"),
-                ],
-                outputs=gr.Number(label="Result"),
-                title="Scientific Calculator",
-                description="Perform scientific operations.",
-            ),
-        ],
-        title="Tabbed Calculator",
-    )
-
-    tabbed_inter.launch()
