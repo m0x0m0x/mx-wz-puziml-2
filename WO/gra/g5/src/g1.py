@@ -18,6 +18,6 @@ def g1_main_call():
 # --- Test Function 1 ---
 def func1():
     with gr.Blocks() as demo:
-        gr.Textbox(label="Smell Panty")
+        gr.Textbox(label="Smell Panty Pussy SnifFStink")
 
     demo.launch()

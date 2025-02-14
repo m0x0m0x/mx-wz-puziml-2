@@ -2,13 +2,15 @@ import gradio as gr
 
 
 def greet(name, intensity):
-    return "Fuck, " + name + "Smell Pussy" + "!" * int(intensity)
+    return "Fuck, " + name + "Smell Pussy Ass" + "!" * int(intensity)
 
 
 demo = gr.Interface(
+    title="Panty Smell",
+    description="Panty Smell Wamts",
     fn=greet,
     inputs=["text", "slider"],
-    outputs=["text", label="SmellPanty"],
+    outputs=["text"],
 )
 
 demo.launch()
