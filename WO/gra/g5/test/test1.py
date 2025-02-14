@@ -6,7 +6,7 @@ def greet(name, intensity):
 
 
 demo = gr.Interface(
-    title="Panty Smell",
+    title="Booty Smell",
     description="Panty Smell Wamts",
     fn=greet,
     inputs=["text", "slider"],
