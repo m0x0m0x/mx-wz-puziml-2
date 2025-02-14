@@ -29,7 +29,7 @@ log = logging.getLogger("rich")
 # ------------------------------------------------------
 
 
-def header1(text):
+def hea1(text):
     panel = Panel.fit(
         f"""[green_yellow]{text}[/green_yellow]""",
         title="<:",
@@ -39,6 +39,11 @@ def header1(text):
     )
     # Print the Panel
     console.print(panel)
+
+
+def hea2(text):
+    console.hrule()
+    console.print(f"[magenta]{text}[/magenta]")
 
 
 def l_debug(text):
