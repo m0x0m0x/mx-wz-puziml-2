@@ -21,4 +21,4 @@ def t1_main_runner():
 
 
 def fn_1():
-    rprint()
+    rprint("BootySmells")
