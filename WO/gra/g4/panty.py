@@ -1,8 +1,9 @@
 from src.utilz import header1
+from src.t1 import t1_main_runner
 
 
 def main():
-    header1("Panty.py")
+    t1_main_runner()
 
 
 if __name__ == "__main__":
