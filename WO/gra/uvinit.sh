@@ -37,7 +37,7 @@ uvsetup() {
     CO1="uv init $name_of_project"
     CO2="cd $name_of_project"
 
-    DEPS="rich python-dotenv gradio huggingface-hub marimo"
+    DEPS="rich python-dotenv gradio huggingface-hub"
     CO3="uv add  $DEPS"
     CO4="uv tree"
 
