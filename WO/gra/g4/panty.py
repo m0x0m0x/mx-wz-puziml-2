@@ -1,5 +1,7 @@
+from src.
+
 def main():
-    print("Hello from g4!")
+    streaming_chat_example()
 
 
 if __name__ == "__main__":

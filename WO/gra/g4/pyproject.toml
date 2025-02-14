@@ -1,7 +1,7 @@
 [project]
 name = "g4"
 version = "0.1.0"
-description = "Add your description here"
+description = "Gra4Test"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
