@@ -17,4 +17,7 @@ def g1_main_call():
 
 # --- Test Function 1 ---
 def func1():
-    hea2("Function 1")
+    with gr.Blocks() as demo:
+        gr.Textbox(label="Smell Panty")
+
+    demo.launch()
