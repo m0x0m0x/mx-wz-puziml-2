@@ -42,8 +42,7 @@ def hea1(text):
 
 
 def hea2(text):
-    console.hrule()
-    console.print(f"[magenta]{text}[/magenta]")
+    console.rule(f"{text}")
 
 
 def l_debug(text):

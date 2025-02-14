@@ -9,8 +9,6 @@ install(show_locals=True)
 
 
 # ****** Main Function Runner ******
-# This will run all the functions in this page which will be called in main
-# So changes only being made here and not in panty
 
 
 def t1_main_runner():
