@@ -2,15 +2,15 @@ import gradio as gr
 from src.utilz import hea1
 
 
-def zunc_1():
+def create_interface():
     hea1("This is a test")
-    with gr.Blocks() as demo:  # This local variable needs to be exposed
+    with gr.Blocks() as demo:
         gr.Markdown(
             "<div align='center'><img src='https://i.ibb.co/SX6n05rS/l.png' width='200'></div>"
         )
         gr.Markdown("<h1><center>Open Explorer</center></h1>")
         gr.Markdown("This is a test <br> Direct Hot reload <br> And Notty with he main")
-        gr.Markdown(" # DOUBLE MAN")
+        gr.Markdown(" # Bladnista")
 
         prompt = gr.Textbox(
             label="Smell Janda ",
@@ -29,9 +29,13 @@ def zunc_1():
     return demo
 
 
-# Create the Gradio demo instance at module level
-demo = zunc_1()
+# Create the Gradio instance at module level
+demo = create_interface()
 
-# Main Execution
-if __name__ == "__main__":
+
+def main():
     demo.launch()
+
+
+if __name__ == "__main__":
+    main()
