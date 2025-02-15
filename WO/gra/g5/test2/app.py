@@ -3,8 +3,7 @@ from src.t1 import func1
 
 
 def main():
-    demo = func1()
-    demo.launch()
+    func1().launch()
 
 
 if __name__ == "__main__":

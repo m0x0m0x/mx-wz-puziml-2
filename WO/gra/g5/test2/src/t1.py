@@ -11,9 +11,9 @@ def func1():
         gr.Markdown("This is a test <br> Direct Hot reload <br> And Notty with he main")
 
         prompt = gr.Textbox(
-            label="Bootango ",
+            label="Bootango - What is the main ",
             type="text",
-            placeholder="Smell Panty Pussy SnifFStink",
+            placeholder="WhatThis",
         )
         token = gr.Textbox(
             label="HF Token",
