@@ -3,7 +3,7 @@
 from .ut import header1
 import os
 from rich.traceback import install
-from dotenv import load_dotenv
+from dotenv import load_dotenv, dotenv_values
 from rich import print as rprint
 
 install(show_locals=True)
@@ -22,5 +22,8 @@ def w1_main():
 
 
 def brint_env():
-    for key, value in os.environ.items():
+    # Loadin the env from .env
+    header1("PrintSmellPantyKeys")
+    geyz = dotenv_values("src/.env")
+    for key, value in geyz.keys():
         rprint(f"{key}={value}")
