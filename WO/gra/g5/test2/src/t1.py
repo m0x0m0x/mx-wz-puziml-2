@@ -11,7 +11,7 @@ def func1():
         gr.Markdown("This is a test <br> Direct Hot reload <br> And Notty with he main")
 
         prompt = gr.Textbox(
-            label="Smell Panty Pussy ",
+            label="Bootango ",
             type="text",
             placeholder="Smell Panty Pussy SnifFStink",
         )
@@ -23,3 +23,5 @@ def func1():
 
         with gr.Row():
             generate_bth = gr.Button("Generate", variant="primary")
+
+    return demo
