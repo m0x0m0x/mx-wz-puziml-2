@@ -1,10 +1,10 @@
 # Work1.py
 
-from .ut import header1
+from .ut import header1, green_box
 import os
+from rich import print as rprint
 from rich.traceback import install
 from dotenv import load_dotenv, dotenv_values
-from rich import print as rprint
 
 install(show_locals=True)
 
@@ -25,5 +25,5 @@ def brint_env():
     # Loadin the env from .env
     header1("PrintSmellPantyKeys")
     geyz = dotenv_values("src/.env")
-    for key, value in geyz.keys():
-        rprint(f"{key}={value}")
+    for key, value in geyz.items():
+        green_box(rprint(f"{key}={value}"), key)
