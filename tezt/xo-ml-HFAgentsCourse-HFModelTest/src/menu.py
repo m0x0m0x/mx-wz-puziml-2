@@ -2,7 +2,7 @@
 from rich.console import Console
 from rich.panel import Panel
 from rich.prompt import Prompt
-from .work1 import qwen15, llam2
+from .work1 import qwen15, llam2, jok1
 import os
 
 console = Console()
@@ -12,7 +12,8 @@ def display_menu():
     options = [
         "1. deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
         "2. meta-llama/Llama-3.2-1B-Instruct",
-        "3. Exit",
+        "3. mradermacher/llama-3.2-1b-dad-jokes-GGUF",
+        "4. Exit",
     ]
 
     menu_text = "\n".join(options)
@@ -37,4 +38,6 @@ def show_menu():
     elif choice == 2:
         llam2()
     elif choice == 3:
+        jok1()
+    elif choice == 4:
         console.print("[bold red]Exiting...")

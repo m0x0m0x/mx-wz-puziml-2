@@ -98,3 +98,48 @@ def llam2():
         l_error(e)
 
     console.rule("END", style="blue")
+
+
+# Jokes Model
+def jok1():
+    os.system("clear")
+    """
+    Jokes Models
+    mradermacher/llama-3.2-1b-dad-jokes-GGUF
+    """
+
+    model = "mradermacher/llama-3.2-1b-dad-jokes-GGUF"
+    console.rule(f"{model}", style="blue")
+    ask_query = Prompt.ask(
+        "Enter your query",
+        default="Explain cosmogenesis",
+    )
+
+    blue_box(
+        f"""{model}
+{ask_query}""",
+        "Query",
+    )
+
+    try:
+        client = InferenceClient(
+            model=model,
+            token=os.getenv("HFA"),
+        )
+    except Exception as e:
+        console.log(f"[bold red]Failed to initialize the inference client: {e}")
+        return
+
+    try:
+        with console.status("[bold green]Generating response...\n", spinner="dots"):
+            client_reply = client.text_generation(ask_query)
+
+        rprint("[bold green]Response received!")
+        green_box(client_reply, "success")
+
+        write_results_to_file_with_date(model, ask_query, client_reply)
+
+    except Exception as e:
+        l_error(e)
+
+    console.rule("END", style="blue")
