@@ -22,7 +22,7 @@ hea1() {
 
 rungra() {
     hea1 "Running uvx gradio test1.py"
-    com1="uvx gradio test1.py"
+    com1="uvx gradio app.py"
     echo -e "${YELLOW}$com1${NC}"
     eval $com1
 }
