@@ -10,6 +10,8 @@ def zunc_1():
         )
         gr.Markdown("<h1><center>Open Explorer</center></h1>")
         gr.Markdown("This is a test <br> Direct Hot reload <br> And Notty with he main")
+        gr.Markdown("--> New Entery")
+        gr.Markdown("Zandango.launch()")
 
         prompt = gr.Textbox(
             label="Smell Janda ",
@@ -28,4 +30,6 @@ def zunc_1():
     return demo
 
 
-zunc_1().launch()
+# Main Execution
+if __name__ == "__main__":
+    zunc_1().launch()
