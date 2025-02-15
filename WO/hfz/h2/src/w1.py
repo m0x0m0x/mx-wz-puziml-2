@@ -15,15 +15,19 @@ load_dotenv("src/.env")
 # File Main function
 def w1_main():
     header1("PrintSmellPantyKeys")
-    brint_env()
 
 
 # *******************************
 
 
+# Function for printing the keys
 def brint_env():
     # Loadin the env from .env
     header1("PrintSmellPantyKeys")
     geyz = dotenv_values("src/.env")
     for key, value in geyz.items():
-        green_box(rprint(f"{key}={value}"), key)
+        val = f"{key}={value}"
+        green_box(val, "Keyz")
+
+
+# Actual Transformer function
