@@ -1,0 +1,19 @@
+{
+  "name": "s1",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "alchemy-sdk": "^3.5.2",
+    "axios": "^1.7.9",
+    "boxen": "^8.0.1",
+    "chalk": "^5.4.1",
+    "dotenv": "^16.4.7",
+    "inquirer": "^12.4.1"
+  }
+}

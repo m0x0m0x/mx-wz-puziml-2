@@ -1,0 +1,14 @@
+Generating mnemonic from provided entropy...
+Successfully generated a new mnemonic.
+Phrase:
+lobster crew update trial grocery state rich fade replace toast own virus
+
+Accounts:
+- Account 0:
+Address:     0xb66A5CfDb06F3C40Ba9dC911BE686112E32cf2e6
+Private key: 0xba65f456082be58af6b3d6644e5150682ce2503fb8c9477fa42fba019680949e
+
+- Account 1:
+Address:     0x58855397faae1468F00534bFb5eD43f1430b6E9e
+Private key: 0xe08718df88bddc6136436e1885f34418374fdd1b1b9560c18281cb2dd1a0d652
+

@@ -1,0 +1,8 @@
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+┃ File Uploaded 📤                            
+┃ id: gZZzRfx6OX                              
+┃ size: 94 kB • type: csv • visibility: public
+┃ SSH 📠                   
+┃ ssh f:gZZzRfx6OX@snips.sh
+┃ URL 🔗                       
+┃ https://snips.sh/f/gZZzRfx6OX
